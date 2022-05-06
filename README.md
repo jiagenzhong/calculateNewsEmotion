@@ -26,13 +26,13 @@ string collection_elements_to_json(lxb_dom_collection_t *collection)
 ```
 
 【getOrUpadate_html()】函数：
-* 在函数中调用【shell】的【curl -s "http://news.baidu.com" > baidu.html】，得到【http://news.baidu.com】的内容，并存到【baidu.html】中。
+* 在函数中调用【shell】的【curl -s "http://news.baidu.com" > baidu.html】，得到【http://news.baidu.com 】的内容，并存到【baidu.html】中。
 
 【parse_html()】函数：
 * 处理【baidu.html】，提取【热点要闻】的内容，存储在【lxb_dom_collection_t *collection_a】里面，以其为参数，调用【collection_elements_to_json(lxb_dom_collection_t *collection)】函数，正常情况，返回值为【collection_elements_to_json(lxb_dom_collection_t *collection)】函数的返回值。
 
 【collection_elements_to_json(lxb_dom_collection_t *collection)】函数：
-* 处理刚刚得到的【lxb_dom_collection_t *collection_a】，在函数中调用【shell】的【curl -s -X POST 'http://baobianapi.pullword.com:9091/get.php' -d '（对应的标题）'】，得到【对应的标题】的【情感计算数值】，然后判断【情感计算数值】为【正面情感or负面情感】，输出对应的【负面情感】的（【标题】以及其对应的【url】）的集合，该集合是json格式的【string】。
+* 处理刚刚得到的【lxb_dom_collection_t \*collection_a】，在函数中调用【shell】的【curl -s -X POST 'http://baobianapi.pullword.com:9091/get.php' -d '（对应的标题）'】，得到【对应的标题】的【情感计算数值】，然后判断【情感计算数值】为【正面情感or负面情感】，输出对应的【负面情感】的（【标题】以及其对应的【url】）的集合，该集合是json格式的【string】。
 
 上述函数，主要调用了：
 * 【lexbor】这个库的函数来处理html
