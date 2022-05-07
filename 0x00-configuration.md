@@ -34,7 +34,7 @@ g++ -std=c++11  -I /usr/local/sogou/include/  -o tutorial-01-wget  tutorial-01-w
 能生成【tutorial-01-wget】，则证明配置成功了。
 
 ### 参考：
-* [ubuntu系统安装openssl-devel]https://www.cnblogs.com/new-journey/p/13323301.html)
+* [ubuntu系统安装openssl-devel](https://www.cnblogs.com/new-journey/p/13323301.html)
 
 
 ----
