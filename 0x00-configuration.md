@@ -24,18 +24,24 @@ sudo apt install cmake
 sudo apt install openssl
 sudo apt install libssl-dev
 
+-----------------
+进入【workflow】所在的文件夹，运行：
+./configure 
+make
+make install
+
 ```
 
-编译【tutorial-01-wget.cc】，测试是否配置成功：
+进入【/workflow/tutorial】所在的文件夹，编译【tutorial-01-wget.cc】，测试是否配置成功：
 ```
-g++ -std=c++11  -I /usr/local/sogou/include/  -o tutorial-01-wget  tutorial-01-wget.cc  /usr/local/sogou/lib64/libworkflow.a  -lssl -lpthread -lcrypto
+g++ -std=c++11  -I /opt/sogou/include/  -o tutorial-01-wget  tutorial-01-wget.cc  /opt/sogou/lib/libworkflow.a  -lssl -lpthread -lcrypto
 ```
 
 能生成【tutorial-01-wget】，则证明配置成功了。
 
 ### 参考：
 * [ubuntu系统安装openssl-devel]https://www.cnblogs.com/new-journey/p/13323301.html)
-
+* [workflow](https://github.com/pennyliang/workflow)
 
 ----
 
